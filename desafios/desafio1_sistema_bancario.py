@@ -8,7 +8,7 @@ menu = f'''
    =        [q] Sair             =
    =                             =
    ===============================
-      DIGITE A OPÇÃO DESEJADA!
+      !DIGITE A OPÇÃO DESEJADA!
 '''
 
 
