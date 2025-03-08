@@ -1,13 +1,13 @@
 
 menu = f'''
-    ***** SISTEMA BANCÁRIO ******
-    *                           *
-    *       [d] Depositar       *
-    *       [s] Sacar           *
-    *       [e] Extrato         *
-    *       [q] Sair            *
-    *                           *
-    *****************************
+   ======= SISTEMA BANCÁRIO ======
+   =                             =
+   =        [d] Depositar        =
+   =        [s] Sacar            =
+   =        [e] Extrato          =
+   =        [q] Sair             =
+   =                             =
+   ===============================
       DIGITE A OPÇÃO DESEJADA!
 '''
 
