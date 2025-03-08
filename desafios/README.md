@@ -57,7 +57,8 @@ Saldo total de: R$500.00
 - Armazenar transações em banco de dados
 
 ## Autor
-Desenvolvido por **Junior de Freitas**. Qualquer sugestão ou melhoria é bem-vinda!
+Desenvolvido por **Junior de Freitas**. 
+Qualquer sugestão ou melhoria é bem-vinda!
 
 ---
 
