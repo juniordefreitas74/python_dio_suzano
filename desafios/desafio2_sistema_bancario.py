@@ -5,8 +5,8 @@ def menu():
         [d]  Depositar
         [s]  sacar
         [e]  Extrato
-        [nu] Novo usuário
-        [nc] Nova conta
+        [u]  Novo usuário
+        [c]  Nova conta
         [q]  Sair
         
    ==========================
@@ -20,7 +20,7 @@ def depositar(saldo, valor, extrato,/): # a barra indica que tudo antes dela dev
       extrato += f'\n(+) Depósito de: R${valor:.2f}' # adicione a operação ao extrtato
       print (f'Depósito de: R$ {valor:.2f} realizado com sucesso!')
    else:
-      print("\n@@@Valor inválido para depósito.@@@")
+      print("\n❌❌❌❌  Valor inválido para depósito. ❌❌❌❌")
    return saldo,extrato
       
 def sacar(*,saldo, valor, extrato, limite, numero_saques, limite_saques): # o * indica que os argumentos são passados por chave=valor
@@ -33,7 +33,7 @@ def sacar(*,saldo, valor, extrato, limite, numero_saques, limite_saques): # o * 
          
          print (f'Saque de: R${valor} feito com sucesso')
       else:
-         print("\n@@@ Valor inválido ou saldo insuficiente. @@@")#se o valor for maior que o limite,maior que o saldo emenor que 0
+         print("\n❌❌❌❌  Valor inválido ou saldo insuficiente. ❌❌❌❌")#se o valor for maior que o limite,maior que o saldo emenor que 0
    
    else:print('Número de saques diários excedidos, volte amanhã!') #se o numero de saques for maior que o limite de saques
    return(saldo,extrato)
@@ -43,7 +43,7 @@ def cadastro_usuario(usuarios):  # Função para cadastrar um novo usuário na l
 
     usuario = filtro_usuario(cpf, usuarios)  # Verifica se o CPF já existe na lista de usuários
     if usuario:  # Se já existir um usuário com esse CPF
-        print('\n@@@ Usuário já cadastrado no banco de dados! @@@')  # Exibe mensagem de erro
+        print('\n❌❌❌❌  Usuário já cadastrado no banco de dados! ❌❌❌❌')  # Exibe mensagem de erro
         return  # Encerra a função sem cadastrar um novo usuário
 
     else:  # Se o CPF não estiver cadastrado, continua o processo de cadastro
@@ -59,7 +59,7 @@ def cadastro_usuario(usuarios):  # Função para cadastrar um novo usuário na l
             'Endereço': endereco
         })
 
-        print('✅ Usuário cadastrado com sucesso! ✅')  # Mensagem de sucesso
+        print('✅  Usuário cadastrado com sucesso! ✅')  # Mensagem de sucesso
 
 def filtro_usuario(cpf, usuarios):  # Função para buscar um usuário na lista pelo CPF
     for usuario in usuarios:  # Percorre a lista de usuários
@@ -73,11 +73,11 @@ def filtro_usuario(cpf, usuarios):  # Função para buscar um usuário na lista 
    
 
 def exibir_extrato(saldo,/,*,extrato):
-   print("\n====== EXTRATO ======")
+   print("\n🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰  EXTRATO 🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰")
    
    print(extrato)
    
-   print (f'\n⩸⩸⩸⩸ seu saldo atual é de: R$ {saldo:.2f} ⩸⩸⩸⩸')
+   print (f'\n🟰🟰🟰🟰  seu saldo atual é de: R$ {saldo:.2f} 🟰🟰🟰🟰')
    
    print("======================")
    return(saldo,extrato)
@@ -102,18 +102,18 @@ def mestre():
       if opcao == 'd':
          valor = float(input('\nDgite o valor do Depósito: R$ '))
          saldo,extrato = depositar(saldo,valor,extrato)
-         print (f'\n⩸⩸⩸⩸ seu saldo atual é de: R$ {saldo:.2f} ⩸⩸⩸⩸')
+         print (f'\n🟰🟰🟰🟰  seu saldo atual é de: R$ {saldo:.2f} 🟰🟰🟰🟰')
          
       elif opcao == 's':
          valor = float(input('\nDgite o valor do Saque: R$ '))
          saldo, extrato = sacar(saldo=saldo, valor=valor, extrato=extrato,limite=limite,numero_saques=numero_saques,limite_saques=LIMITE_SAQUES)
-         print (f'\n⩸⩸⩸⩸ seu saldo atual é de: R$ {saldo:.2f} ⩸⩸⩸⩸')
+         print (f'\n🟰🟰🟰🟰  seu saldo atual é de: R$ {saldo:.2f} 🟰🟰🟰🟰')
          numero_saques += 1
          
       elif opcao == 'e':
          saldo,extrato = exibir_extrato(saldo, extrato=extrato,)
          
-      elif opcao== 'nu':
+      elif opcao== 'u':
          cadastro_usuario(usuarios)
          
          
@@ -122,7 +122,7 @@ def mestre():
          break
       
       else:
-        print('@@@@ Operação inválida, por favor selecione novamente a opção desejada @@@@')
+        print('❌❌❌❌   Operação inválida, por favor selecione novamente a opção desejada ❌❌❌❌')
 
          
       
