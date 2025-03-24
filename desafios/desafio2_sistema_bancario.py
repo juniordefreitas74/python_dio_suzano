@@ -1,16 +1,16 @@
 def menu():
-    menu_texto = '''
-   ========== MENU ==========
-   
-        [d]  Depositar
-        [s]  sacar
-        [e]  Extrato
-        [u]  Novo usuário
-        [c]  Nova conta
-        [q]  Sair
-        
-   ==========================
-   '''
+    menu_texto = """
+\033[1;34m==================================\033[0m
+\033[1;32m|          💰 MENU 💰           |\033[0m
+\033[1;34m==================================\033[0m
+\033[1;36m| [d] Depositar                  |\033[0m
+\033[1;36m| [s] Sacar                      |\033[0m
+\033[1;36m| [e] Extrato                    |\033[0m
+\033[1;36m| [u] Novo usuário               |\033[0m
+\033[1;36m| [c] Nova conta                 |\033[0m
+\033[1;31m| [q] Sair                       |\033[0m
+\033[1;34m==================================\033[0m
+"""
     return input(menu_texto)
 
 
@@ -78,6 +78,10 @@ def cadastro_usuario(usuarios):  # Função para cadastrar um novo usuário na l
         })
 
         print('✅  Usuário cadastrado com sucesso! ✅')  # Mensagem de sucesso
+
+
+def nova_conta():
+    return
 
 
 def filtro_usuario(cpf, usuarios):  # Função para buscar um usuário na lista pelo CPF
